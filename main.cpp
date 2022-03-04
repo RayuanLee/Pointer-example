@@ -19,7 +19,7 @@ struct node {
 
 class list{
 private:
-    /*here we are creating some pointers for the beginning of our node to the end of it*/
+    /*here we are creating two pointers for the beginning of our node[list] and for the end of the list */
     
     node *head, *tail;
     
@@ -32,12 +32,14 @@ public:
         
         tail = NULL;
     }
-    //Here we create a methode for when we need to create a new node and get a new value
+    //Here we create a method for when we need to create a new node and get a new value and place that value correctly in the list//
     void createnode (int value){
         
         node *temp = new node;
         temp -> sample = value;
         temp -> next = NULL;
+        
+        
         
         if(head != NULL){
             
